@@ -1,0 +1,17 @@
+$font-stack: Helvetica, sans-serif;
+$primary-text-color: hsl(0, 0%, 0%);
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 1.2rem $font-stack;
+  color: $primary-text-color;
+}
+
+.wrapper {
+  padding: 20px;
+}
