@@ -15,7 +15,7 @@ export const About = () => {
   return (
     <section>
       <div className="wrapper about">
-        <div className="sectionTitle">
+        <div className="titleSection">
           <h2>O nas</h2>
         </div>
         <div className="informationSection">

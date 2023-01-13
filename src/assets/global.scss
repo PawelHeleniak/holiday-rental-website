@@ -1,5 +1,6 @@
 $font-stack: sans-serif;
 $primary-text-color: hsl(0, 0%, 0%);
+$light-text-color: hsl(0, 0%, 100%);
 $general-color: hsl(216, 70%, 45%);
 
 * {
@@ -15,8 +16,9 @@ body {
 
 .wrapper {
   padding: 20px;
+  overflow: hidden;
 
-  .sectionTitle {
+  .titleSection {
     text-align: center;
     padding-bottom: 20px;
   }
@@ -59,5 +61,33 @@ header {
 .wrapper.about {
   .boxSection {
     padding-bottom: 20px;
+  }
+}
+
+.wrapper.offers {
+  .informationSection {
+    display: flex;
+    flex-direction: column;
+
+    .city {
+      padding-bottom: 20px;
+
+      .cityPicture {
+        position: relative;
+
+        .cityName {
+          position: absolute;
+          padding: 10px;
+          font-weight: 600;
+          font-size: 1.2em;
+          color: $light-text-color;
+          text-shadow: 2px 2px 5px $primary-text-color;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 }
