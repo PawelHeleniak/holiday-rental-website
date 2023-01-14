@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
 
+import { Link } from 'react-router-dom'
+
 const optionsCity = [
   { label: 'Wrocław', value: 1, },
   { label: 'Zakopane', value: 2, },
@@ -25,7 +27,7 @@ export const HeaderForm = () => {
         <Select options={optionsPlace} />
       </div>
       <div className="button">
-        <button>Szukaj oferty</button>
+        <Link to="/offers"><button>Szukaj oferty</button></Link>
       </div>
     </form>
   )
