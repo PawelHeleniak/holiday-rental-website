@@ -1,4 +1,5 @@
 import React from 'react'
+import { HeaderForm } from './HeaderForm'
 
 export const Header = () => {
   return (
@@ -12,8 +13,8 @@ export const Header = () => {
             <p>Znajdź miejsce na kolejny pobyt</p>
             <p>Szukaj ofert dopasowanych do swoich potrzeb</p>
           </div>
-          <div className="searchButton">
-            <button>Szukaj oferty</button>
+          <div className="searchFrom">
+            <HeaderForm />
           </div>
 
         </div>

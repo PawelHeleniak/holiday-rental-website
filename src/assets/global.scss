@@ -22,6 +22,11 @@ body {
     text-align: center;
     padding-bottom: 20px;
   }
+
+  select {
+    width: 100%;
+    padding: 5px;
+  }
 }
 
 button {
@@ -41,7 +46,6 @@ header {
   .wrapper.header {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     height: 100%;
 
     .headerBox {
@@ -54,6 +58,20 @@ header {
       .headerDescription {
         padding-bottom: 40px;
       }
+
+      .searchFrom {
+        width: 100%;
+
+
+        .select {
+          padding-bottom: 10px;
+        }
+
+        .button {
+          text-align: center;
+        }
+      }
+
     }
   }
 }
