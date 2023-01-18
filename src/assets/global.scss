@@ -1,7 +1,9 @@
 $font-stack: sans-serif;
-$primary-text-color: hsl(0, 0%, 0%);
+$dark-text-color: hsl(0, 0%, 0%);
 $light-text-color: hsl(0, 0%, 100%);
-$general-color: hsl(216, 70%, 45%);
+$general-color: hsl(216, 60%, 45%);
+$aditional-color: hsl(150, 100%, 40%);
+// $general-color: hsl(216, 70%, 45%);
 
 * {
   margin: 0;
@@ -11,7 +13,7 @@ $general-color: hsl(216, 70%, 45%);
 
 body {
   font: 1.2rem $font-stack;
-  color: $primary-text-color;
+  color: $dark-text-color;
 }
 
 .wrapper {
@@ -22,26 +24,27 @@ body {
     text-align: center;
     padding-bottom: 20px;
   }
-
-  select {
-    width: 100%;
-    padding: 5px;
-  }
 }
 
 button {
   padding: 10px 20px;
   font-weight: 600;
-  color: $general-color;
+  font-size: 1rem;
+  color: $aditional-color;
   background-color: transparent;
-  border: 2px solid $general-color;
-  border-left: 2px solid transparent;
-  border-top: 2px solid transparent;
+  border: 4px solid $aditional-color;
+  border-left: 4px solid transparent;
+  border-top: 4px solid transparent;
 }
 
 header {
   height: 60vh;
-  background-color: hsl(0, 0%, 90%);
+  background-color: $general-color;
+  color: $light-text-color;
+
+  .headerTitle {
+    font-size: 1.4rem;
+  }
 
   .wrapper.header {
     display: flex;
@@ -99,7 +102,7 @@ header {
           font-weight: 600;
           font-size: 1.2em;
           color: $light-text-color;
-          text-shadow: 2px 2px 5px $primary-text-color;
+          text-shadow: 2px 2px 5px $dark-text-color;
         }
 
         img {

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
 
-import { Link } from 'react-router-dom'
-
+import { useNavigate } from "react-router-dom";
 const optionsCity = [
   { label: 'Wrocław', value: 1, },
   { label: 'Zakopane', value: 2, },
@@ -17,17 +16,21 @@ const optionsPlace = [
 ]
 
 export const HeaderForm = () => {
+  const navigate = useNavigate();
 
+  function handleClick() {
+    navigate("/offers");
+  }
   return (
-    <form action="">
+    <form method='get'>
       <div className="select">
-        <Select options={optionsCity} />
+        <Select options={optionsCity} placeholder='Wybierz miasto' />
       </div>
       <div className="select">
-        <Select options={optionsPlace} />
+        <Select options={optionsPlace} placeholder='Wybierz obiekt' />
       </div>
       <div className="button">
-        <Link to="/offers"><button>Szukaj oferty</button></Link>
+        <button onClick={handleClick}>Szukaj oferty</button>
       </div>
     </form>
   )
