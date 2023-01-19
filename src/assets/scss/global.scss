@@ -1,3 +1,5 @@
+@use 'media-screen' as ms;
+
 $font-stack: sans-serif;
 
 $dark-text-color: hsl(0, 0%, 20%);
@@ -18,8 +20,13 @@ body {
 }
 
 .wrapper {
+  @include ms.desktop {
+    max-width: calc(1200px);
+    margin: 0 auto !important;
+  }
+
   padding: 20px;
-  overflow: hidden;
+
 
   .titleSection {
     text-align: center;
@@ -65,6 +72,7 @@ header {
 
   .headerTitle {
     font-size: 1.4rem;
+    font-weight: 600;
   }
 
   .wrapper.header {
@@ -134,11 +142,18 @@ header {
 
 .wrapper.cities {
   .informationSection {
-    display: flex;
-    flex-direction: column;
+    @include ms.tablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      // grid-row-gap: 20px;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr;
 
     .city {
       padding-bottom: 20px;
+
 
       .cityPicture {
         position: relative;
@@ -154,6 +169,7 @@ header {
 
         img {
           width: 100%;
+          aspect-ratio: 2;
         }
       }
     }

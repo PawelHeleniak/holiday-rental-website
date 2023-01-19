@@ -1,4 +1,4 @@
-import './assets/global.scss';
+import './assets/scss/global.scss';
 import { HomePage } from './pages/HomePage/HomePage';
 import { OffersPage } from './pages/OffersPage/OffersPage';
 
