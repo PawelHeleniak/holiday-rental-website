@@ -1,23 +1,25 @@
 import React from 'react'
 import Select from 'react-select'
 
-export const FiltersForm = ({ optionsCity, location }) => {
+export const FiltersForm = ({ optionsCity, optionsPlace, optionsMembers, location }) => {
+  const { city, place } = location.state.options;
 
   //react-select style
   const baseStyles = {
     option: (styles) => ({ ...styles, color: 'hsl(0, 0%, 10%)', cursor: 'pointer' }),
   }
-  console.log(location);
+  console.log(city);
+  console.log(place);
   return (
     <form action="get">
       <div className="select">
-        <Select options={optionsCity} placeholder='Wybierz miasto' styles={baseStyles} defaultValue={optionsCity[1]} />
+        <Select options={optionsCity} placeholder='Wybierz miasto' styles={baseStyles} defaultValue={optionsCity[city]} />
       </div>
       <div className="select">
-        <Select options={optionsCity} placeholder='Wybierz objekt' styles={baseStyles} />
+        <Select options={optionsPlace} placeholder='Wybierz objekt' styles={baseStyles} defaultValue={optionsPlace[place]} />
       </div>
       <div className="select">
-        <Select options={optionsCity} placeholder='Ilość osób' styles={baseStyles} />
+        <Select options={optionsMembers} placeholder='Ilość osób' styles={baseStyles} />
       </div>
       <div className="inputWrapper">
         <label htmlFor="">Od</label>
