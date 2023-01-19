@@ -6,8 +6,8 @@ export const HomePage = (props) => {
   return (
     <>
       <Header selectValue={props} />
-      <About />
       <Cities />
+      <About />
     </>
   )
 }
