@@ -1,12 +1,5 @@
+@use 'variables' as v;
 @use 'media-screen' as ms;
-
-$font-stack: sans-serif;
-
-$dark-text-color: hsl(0, 0%, 20%);
-$light-text-color: hsl(0, 0%, 100%);
-$general-color: hsl(216, 60%, 45%);
-$aditional-color: hsl(150, 100%, 40%);
-$aditional-color2: hsl(150, 100%, 40%);
 
 * {
   margin: 0;
@@ -15,8 +8,8 @@ $aditional-color2: hsl(150, 100%, 40%);
 }
 
 body {
-  font: 1.2rem $font-stack;
-  color: $dark-text-color;
+  font: 1.2rem v.$font-stack;
+  color: v.$dark-text-color;
 }
 
 .wrapper {
@@ -37,13 +30,13 @@ body {
       width: max-content;
       margin: auto;
       padding: 0 5px;
-      background-color: $light-text-color;
+      background-color: v.$light-text-color;
 
       &:before {
         content: '';
         z-index: -1;
         position: absolute;
-        background-color: $dark-text-color;
+        background-color: v.$dark-text-color;
         width: 100%;
         height: 3px;
         left: 0;
@@ -59,16 +52,16 @@ button {
   width: 100%;
   font-weight: 600;
   font-size: 1.2rem;
-  color: $light-text-color;
-  background-color: $aditional-color;
+  color: v.$light-text-color;
+  background-color: v.$aditional-color;
   border: none;
   border-radius: 6px;
 }
 
 header {
   height: 50vh;
-  background-color: $general-color;
-  color: $light-text-color;
+  background-color: v.$general-color;
+  color: v.$light-text-color;
 
   .headerTitle {
     font-size: 1.4rem;
@@ -163,8 +156,8 @@ header {
           padding: 10px;
           font-weight: 600;
           font-size: 1.2em;
-          color: $light-text-color;
-          text-shadow: 2px 2px 5px $dark-text-color;
+          color: v.$light-text-color;
+          text-shadow: 2px 2px 5px v.$dark-text-color;
         }
 
         img {
@@ -183,7 +176,7 @@ nav {
 
   .backArrow {
     svg {
-      color: $light-text-color;
+      color: v.$light-text-color;
     }
   }
 }

@@ -2,11 +2,11 @@ import React from 'react'
 import { City } from './City'
 
 //img
-import wroclaw from '../../../assets/img/wroclaw.jpg'
-import zakopane from '../../../assets/img/zakopane.jpg'
-import szczecin from '../../../assets/img/szczecin.jpg'
-import gdansk from '../../../assets/img/gdansk.jpg'
-import solina from '../../../assets/img/solina.jpg'
+import wroclaw from '../../../assets/img/cities/wroclaw.jpg'
+import zakopane from '../../../assets/img/cities/zakopane.jpg'
+import szczecin from '../../../assets/img/cities/szczecin.jpg'
+import gdansk from '../../../assets/img/cities/gdansk.jpg'
+import solina from '../../../assets/img/cities/solina.jpg'
 
 export const Cities = () => {
   const cities = [
