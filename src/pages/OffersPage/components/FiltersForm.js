@@ -6,10 +6,12 @@ export const FiltersForm = ({ optionsCity, optionsPlace, optionsMembers, locatio
 
   //react-select style
   const baseStyles = {
+    control: (styles) => ({
+      ...styles, borderRadius: '6px', padding: '5px',
+    }),
     option: (styles) => ({ ...styles, color: 'hsl(0, 0%, 10%)', cursor: 'pointer' }),
   }
-  console.log(city);
-  console.log(place);
+
   return (
     <form action="get">
       <div className="select">
@@ -21,13 +23,15 @@ export const FiltersForm = ({ optionsCity, optionsPlace, optionsMembers, locatio
       <div className="select">
         <Select options={optionsMembers} placeholder='Ilość osób' styles={baseStyles} />
       </div>
-      <div className="inputWrapper">
-        <label htmlFor="">Od</label>
-        <input type="date" name="" id="" />
-      </div>
-      <div className="inputWrapper">
-        <label htmlFor="">Do</label>
-        <input type="date" name="" id="" />
+      <div className="inputBox">
+        <div className="inputWrapper">
+          <label htmlFor="">Od</label>
+          <input type="date" name="" id="" />
+        </div>
+        <div className="inputWrapper">
+          <label htmlFor="">Do</label>
+          <input type="date" name="" id="" />
+        </div>
       </div>
       <div className="button">
         {/* <button onClick={handleClick}>Szukaj oferty</button> */}

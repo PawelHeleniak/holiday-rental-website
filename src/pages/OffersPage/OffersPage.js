@@ -13,7 +13,11 @@ export const OffersPage = ({ optionsCity, optionsPlace, optionsMembers }) => {
     <header>
       <div className="wrapper header">
         <Nav />
-        <FiltersForm optionsCity={optionsCity} optionsPlace={optionsPlace} optionsMembers={optionsMembers} location={location} />
+        <div className="headerBox">
+          <div className="searchFrom">
+            <FiltersForm optionsCity={optionsCity} optionsPlace={optionsPlace} optionsMembers={optionsMembers} location={location} />
+          </div>
+        </div>
       </div>
     </header>
   )

@@ -58,6 +58,7 @@ button {
   border-radius: 6px;
 }
 
+//--- HEADER Section---
 header {
   height: 50vh;
   background-color: v.$general-color;
@@ -101,6 +102,29 @@ header {
   }
 }
 
+.inputBox {
+  display: flex;
+
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &:last-child {
+      margin-left: 5px;
+    }
+
+    input {
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 6px;
+      padding: 5px;
+
+    }
+  }
+}
+
+//--- ABOUT Section---
 .wrapper.about {
   .boxSection {
     padding-bottom: 40px;
@@ -133,6 +157,7 @@ header {
   }
 }
 
+//--- CITY Section---
 .wrapper.cities {
   .informationSection {
     @include ms.tablet {
@@ -169,6 +194,7 @@ header {
   }
 }
 
+//--- NAV Section---
 nav {
   display: flex;
   flex-direction: row-reverse;
