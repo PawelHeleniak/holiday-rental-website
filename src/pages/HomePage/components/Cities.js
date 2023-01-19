@@ -1,5 +1,5 @@
 import React from 'react'
-import { Offer } from './Offer'
+import { City } from './City'
 
 //img
 import wroclaw from '../../../assets/img/wroclaw.jpg'
@@ -8,8 +8,8 @@ import szczecin from '../../../assets/img/szczecin.jpg'
 import gdansk from '../../../assets/img/gdansk.jpg'
 import solina from '../../../assets/img/solina.jpg'
 
-export const Offers = () => {
-  const city = [
+export const Cities = () => {
+  const cities = [
     {
       name: 'Wrocław',
       img: wroclaw,
@@ -31,16 +31,16 @@ export const Offers = () => {
       img: solina,
     },
   ]
-  const offer = city.map(val => <Offer val={val} />)
+  const city = cities.map(val => <City val={val} />)
 
   return (
     <section>
-      <div className="wrapper offers">
+      <div className="wrapper cities">
         <div className="titleSection">
-          <h2>Oferty</h2>
+          <h2>Miasta</h2>
         </div>
         <div className="informationSection">
-          {offer}
+          {city}
         </div>
       </div>
     </section>

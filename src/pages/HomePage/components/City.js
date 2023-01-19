@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Offer = (props) => {
+export const City = (props) => {
   const { name, img } = props.val
 
   return (
