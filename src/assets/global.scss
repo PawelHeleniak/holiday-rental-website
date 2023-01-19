@@ -1,5 +1,5 @@
 $font-stack: sans-serif;
-$dark-text-color: hsl(0, 0%, 0%);
+$dark-text-color: hsl(0, 0%, 10%);
 $light-text-color: hsl(0, 0%, 100%);
 $general-color: hsl(216, 60%, 45%);
 $aditional-color: hsl(150, 100%, 40%);
@@ -109,6 +109,18 @@ header {
           width: 100%;
         }
       }
+    }
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  .backArrow {
+    svg {
+      color: $light-text-color;
     }
   }
 }

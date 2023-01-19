@@ -1,10 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Nav } from './components/Nav'
+import { FiltersForm } from './components/FiltersForm'
 
-export const OffersPage = () => {
+import { useLocation } from "react-router-dom"
+
+export const OffersPage = ({ optionsCity, optionsPlace, optionsMembers }) => {
+  // get userId
+  const location = useLocation();
   return (
     <header>
-      <Link to="/"><button>Powrót</button></Link>
+      <div className="wrapper header">
+        <Nav />
+        <FiltersForm optionsCity={optionsCity} optionsPlace={optionsPlace} optionsMembers={optionsMembers} location={location} />
+      </div>
     </header>
   )
 }

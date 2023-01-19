@@ -2,32 +2,26 @@ import React, { useState } from 'react'
 import Select from 'react-select'
 
 import { useNavigate } from "react-router-dom";
-const optionsCity = [
-  { label: 'Wrocław', value: 1, },
-  { label: 'Zakopane', value: 2, },
-  { label: 'Szczecin', value: 3, },
-  { label: 'Gdańsk', value: 4, },
-  { label: 'Solina', value: 5, },
-]
-const optionsPlace = [
-  { label: 'Domek', value: 1, },
-  { label: 'Hotel', value: 2, },
-  { label: 'Apartament', value: 3, },
-]
 
-export const HeaderForm = () => {
+export const HeaderForm = ({ selectValue }) => {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate("/offers");
+    navigate('/offers')
   }
+
+  //react-select style
+  const baseStyles = {
+    option: (styles) => ({ ...styles, color: 'hsl(0, 0%, 10%)', cursor: 'pointer' }),
+  }
+
   return (
     <form method='get'>
       <div className="select">
-        <Select options={optionsCity} placeholder='Wybierz miasto' />
+        <Select options={selectValue.optionsCity} placeholder='Wybierz miasto' styles={baseStyles} />
       </div>
       <div className="select">
-        <Select options={optionsPlace} placeholder='Wybierz obiekt' />
+        <Select options={selectValue.optionsPlace} placeholder='Wybierz obiekt' styles={baseStyles} />
       </div>
       <div className="button">
         <button onClick={handleClick}>Szukaj oferty</button>

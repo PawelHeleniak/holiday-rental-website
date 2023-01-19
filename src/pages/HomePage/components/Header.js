@@ -1,7 +1,8 @@
 import React from 'react'
 import { HeaderForm } from './HeaderForm'
 
-export const Header = () => {
+export const Header = ({ selectValue }) => {
+
   return (
     <header>
       <div className="wrapper header">
@@ -14,7 +15,7 @@ export const Header = () => {
             <p>Szukaj ofert dopasowanych do swoich potrzeb</p>
           </div>
           <div className="searchFrom">
-            <HeaderForm />
+            <HeaderForm selectValue={selectValue} />
           </div>
 
         </div>
