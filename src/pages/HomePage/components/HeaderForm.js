@@ -12,6 +12,9 @@ export const HeaderForm = ({ selectValue }) => {
 
   //react-select style
   const baseStyles = {
+    control: (styles) => ({
+      ...styles, borderRadius: '6px', padding: '5px',
+    }),
     option: (styles) => ({ ...styles, color: 'hsl(0, 0%, 10%)', cursor: 'pointer' }),
   }
 

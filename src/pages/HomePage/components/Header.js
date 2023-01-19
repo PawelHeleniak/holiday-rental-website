@@ -11,8 +11,9 @@ export const Header = ({ selectValue }) => {
         </div>
         <div className="headerBox">
           <div className="headerDescription">
-            <p>Znajdź miejsce na kolejny pobyt</p>
-            <p>Szukaj ofert dopasowanych do swoich potrzeb</p>
+            <h3>Wyszukaj</h3>
+            <p>Miejsce na kolejny pobyt...</p>
+            {/* <p>Szukaj ofert dopasowanych do swoich potrzeb</p> */}
           </div>
           <div className="searchFrom">
             <HeaderForm selectValue={selectValue} />

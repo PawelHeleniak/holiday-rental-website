@@ -5,6 +5,7 @@ import { FiltersForm } from './components/FiltersForm'
 import { useLocation } from "react-router-dom"
 
 export const OffersPage = ({ optionsCity, optionsPlace, optionsMembers }) => {
+
   // get userId
   const location = useLocation();
   return (

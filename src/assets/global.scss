@@ -1,9 +1,10 @@
 $font-stack: sans-serif;
-$dark-text-color: hsl(0, 0%, 10%);
+
+$dark-text-color: hsl(0, 0%, 20%);
 $light-text-color: hsl(0, 0%, 100%);
 $general-color: hsl(216, 60%, 45%);
 $aditional-color: hsl(150, 100%, 40%);
-// $general-color: hsl(216, 70%, 45%);
+$aditional-color2: hsl(150, 100%, 40%);
 
 * {
   margin: 0;
@@ -28,17 +29,17 @@ body {
 
 button {
   padding: 10px 20px;
+  width: 100%;
   font-weight: 600;
-  font-size: 1rem;
-  color: $aditional-color;
-  background-color: transparent;
-  border: 4px solid $aditional-color;
-  border-left: 4px solid transparent;
-  border-top: 4px solid transparent;
+  font-size: 1.2rem;
+  color: $light-text-color;
+  background-color: $aditional-color;
+  border: none;
+  border-radius: 6px;
 }
 
 header {
-  height: 60vh;
+  height: 50vh;
   background-color: $general-color;
   color: $light-text-color;
 
@@ -55,7 +56,7 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      // align-items: center;
       height: 100%;
 
       .headerDescription {
@@ -67,7 +68,7 @@ header {
 
 
         .select {
-          padding-bottom: 10px;
+          padding-bottom: 5px;
         }
 
         .button {
