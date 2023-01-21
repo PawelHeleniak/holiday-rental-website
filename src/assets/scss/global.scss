@@ -118,7 +118,7 @@ header {
       font-size: 1.2rem;
       border: none;
       border-radius: 6px;
-      padding: 5px;
+      padding: 10px;
 
     }
   }
@@ -203,6 +203,43 @@ nav {
   .backArrow {
     svg {
       color: v.$light-text-color;
+    }
+  }
+}
+
+//--- OFFERS Section---
+.wrapper.offers {
+  .offersCount {
+    padding-bottom: 10px;
+  }
+
+  .offer {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    border-bottom: 1px solid v.$dark-text-color;
+
+    .offerImg {
+      padding: 15%;
+      background-color: rgb(212, 253, 253);
+    }
+
+    .offerBox {
+      width: 70%;
+      padding-left: 10px;
+
+      .title {
+
+        p {
+          font-weight: 600;
+        }
+      }
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
     }
   }
 }

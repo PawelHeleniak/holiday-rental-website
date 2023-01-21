@@ -1,7 +1,10 @@
 import React from 'react'
 import Select from 'react-select'
 
-export const FiltersForm = ({ optionsCity, optionsPlace, optionsMembers, location }) => {
+// export const FiltersForm = ({ optionsCity, optionsPlace, optionsMembers, location }) => {
+export const FiltersForm = ({ props }) => {
+
+  const { optionsCity, optionsPlace, optionsMembers, location } = props;
   const { city, place } = location.state.options;
 
   //react-select style
