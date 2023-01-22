@@ -11,7 +11,7 @@ export const OffersPage = ({ optionsCity, optionsPlace, optionsMembers }) => {
   return (
     <>
       <Header optionsCity={optionsCity} optionsPlace={optionsPlace} optionsMembers={optionsMembers} location={location} />
-      <Offers />
+      <Offers location={location} />
     </>
   )
 }
