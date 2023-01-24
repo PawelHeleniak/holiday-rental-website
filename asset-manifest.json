@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/holiday-rental-website/static/css/main.adec6775.css",
-    "main.js": "/holiday-rental-website/static/js/main.e34d1481.js",
+    "main.css": "/holiday-rental-website/static/css/main.0b5c32e3.css",
+    "main.js": "/holiday-rental-website/static/js/main.b03c7c1a.js",
     "static/js/787.36066407.chunk.js": "/holiday-rental-website/static/js/787.36066407.chunk.js",
     "static/media/wroclaw.jpg": "/holiday-rental-website/static/media/wroclaw.6b7d0a364fa7a1bdd2c4.jpg",
     "static/media/zakopane.jpg": "/holiday-rental-website/static/media/zakopane.06df9609311cfe8d7b9b.jpg",
     "static/media/gdansk.jpg": "/holiday-rental-website/static/media/gdansk.0413a17616f11d715a42.jpg",
     "static/media/szczecin.jpg": "/holiday-rental-website/static/media/szczecin.564972b1065e0a59f690.jpg",
     "static/media/solina.jpg": "/holiday-rental-website/static/media/solina.0dbeb1302c4c73862edf.jpg",
+    "static/media/apartament.jpg": "/holiday-rental-website/static/media/apartament.07cb81b94142a0cce228.jpg",
+    "static/media/house.jpg": "/holiday-rental-website/static/media/house.5edddfd976ffdcf04969.jpg",
+    "static/media/hotel.jpg": "/holiday-rental-website/static/media/hotel.97b0faae3d48e2b44805.jpg",
     "index.html": "/holiday-rental-website/index.html",
-    "main.adec6775.css.map": "/holiday-rental-website/static/css/main.adec6775.css.map",
-    "main.e34d1481.js.map": "/holiday-rental-website/static/js/main.e34d1481.js.map",
+    "main.0b5c32e3.css.map": "/holiday-rental-website/static/css/main.0b5c32e3.css.map",
+    "main.b03c7c1a.js.map": "/holiday-rental-website/static/js/main.b03c7c1a.js.map",
     "787.36066407.chunk.js.map": "/holiday-rental-website/static/js/787.36066407.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.adec6775.css",
-    "static/js/main.e34d1481.js"
+    "static/css/main.0b5c32e3.css",
+    "static/js/main.b03c7c1a.js"
   ]
 }
