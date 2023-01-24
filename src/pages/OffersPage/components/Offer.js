@@ -1,12 +1,12 @@
 import React from 'react'
 
 export const Offer = (props) => {
-  const { title, adress, place, price } = props.data
+  const { title, adress, place, price, img } = props.data
 
   return (
     <div className="offer">
       <div className="offerImg">
-
+        <img src={img} alt="" />
       </div>
       <div className="offerBox">
         <div className="title">

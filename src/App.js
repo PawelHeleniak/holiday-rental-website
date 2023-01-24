@@ -28,7 +28,7 @@ const optionsMembers = [
 export const App = () => {
   return (
     <Routes>
-      <Route extact path="/" element={<HomePage optionsCity={optionsCity} optionsPlace={optionsPlace} optionsMembers={optionsMembers} />} />
+      <Route extact path="/holiday-rental-website" element={<HomePage optionsCity={optionsCity} optionsPlace={optionsPlace} optionsMembers={optionsMembers} />} />
       <Route path="/offers" element={<OffersPage optionsCity={optionsCity} optionsPlace={optionsPlace} optionsMembers={optionsMembers} />} />
     </Routes>
   );

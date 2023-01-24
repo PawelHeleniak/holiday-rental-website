@@ -11,7 +11,7 @@ export const Nav = () => {
         <p>Wynajem.pl</p>
       </div>
       <div className="backArrow">
-        <Link to="/"><FontAwesomeIcon icon={faArrowLeftLong} /></Link>
+        <Link to="/holiday-rental-website"><FontAwesomeIcon icon={faArrowLeftLong} /></Link>
       </div>
     </nav>
   )

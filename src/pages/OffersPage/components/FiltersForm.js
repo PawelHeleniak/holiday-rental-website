@@ -31,7 +31,7 @@ export const FiltersForm = ({ props }) => {
         <div className="select">
           <Select options={optionsMembers} placeholder='Ilość osób' styles={baseStyles} />
         </div>
-        <div className="inputBox">
+        {/* <div className="inputBox">
           <div className="inputWrapper">
             <label htmlFor="">Od</label>
             <input type="date" name="" id="" />
@@ -40,7 +40,7 @@ export const FiltersForm = ({ props }) => {
             <label htmlFor="">Do</label>
             <input type="date" name="" id="" />
           </div>
-        </div>
+        </div> */}
         <div className="button">
           <button type="button" onClick={e => activeOptions(optionss)}>Szukaj oferty</button>
         </div>

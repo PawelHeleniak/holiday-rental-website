@@ -1,11 +1,18 @@
 import React, { useState } from 'react'
 import { Offer } from './Offer'
 
+//img (temporarily)
+import house from '../../../assets/img/offers/house.jpg'
+import hotel from '../../../assets/img/offers/hotel.jpg'
+import apartament from '../../../assets/img/offers/apartament.jpg'
+
 export const Offers = (props) => {
   const { city, place } = props.options
 
+  //temporarily
   const offers = [
     {
+      img: house,
       title: 'Lorem ipsum dolor sit amet1',
       adress: 'Zakopane',
       place: 'Domek',
@@ -14,6 +21,7 @@ export const Offers = (props) => {
       placeValue: 0,
     },
     {
+      img: hotel,
       title: 'Lorem ipsum dolor sit amet1',
       adress: 'Zakopane',
       place: 'Hotel',
@@ -22,6 +30,7 @@ export const Offers = (props) => {
       placeValue: 1,
     },
     {
+      img: house,
       title: 'Lorem ipsum dolor sit amet1',
       adress: 'Zakopane',
       place: 'Domek',
@@ -30,6 +39,7 @@ export const Offers = (props) => {
       placeValue: 0,
     },
     {
+      img: hotel,
       title: 'Lorem ipsum dolor sit amet2',
       adress: 'Solina',
       place: 'Hotel',
@@ -39,6 +49,7 @@ export const Offers = (props) => {
 
     },
     {
+      img: apartament,
       title: 'Lorem ipsum dolor sit amet3',
       adress: 'Solina',
       place: 'Apartament',
@@ -61,7 +72,7 @@ export const Offers = (props) => {
     <section>
       <div className="wrapper offers">
         <div className='offersCount'>
-          <p>Znaleziono: 2 oferty</p>
+          <p>Liczba ofert: {offer.length}</p>
         </div>
         {offer}
       </div>
