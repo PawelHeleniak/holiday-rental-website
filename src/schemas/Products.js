@@ -1,17 +1,14 @@
 //img
-import house from '../assets/img/offers/house.jpg'
+import cottage from '../assets/img/offers/cottage.jpg'
 import hotel from '../assets/img/offers/hotel.jpg'
 import apartament from '../assets/img/offers/apartament.jpg'
 
 export const PRODUCTS = [
-  //cityValue: 0-Wrocław; 1-Zakopane; 2-Szczecin; 3-Gdańsk; 4-Solina; 
-  //placeValue: 0-Domek; 1-Hotel; 2-Apartament;
-
   {
     id: 0,
-    cityValue: 1,
-    placeValue: 0,
-    img: house,
+    cityValue: 'zakopane',
+    placeValue: 'cottage',
+    img: cottage,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Zakopane',
     place: 'Domek',
@@ -19,9 +16,9 @@ export const PRODUCTS = [
   },
   {
     id: 1,
-    cityValue: 1,
-    placeValue: 0,
-    img: house,
+    cityValue: 'zakopane',
+    placeValue: 'cottage',
+    img: cottage,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Zakopane',
     place: 'Domek',
@@ -29,9 +26,9 @@ export const PRODUCTS = [
   },
   {
     id: 2,
-    cityValue: 1,
-    placeValue: 0,
-    img: house,
+    cityValue: 'zakopane',
+    placeValue: 'cottage',
+    img: cottage,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Zakopane',
     place: 'Domek',
@@ -39,8 +36,8 @@ export const PRODUCTS = [
   },
   {
     id: 3,
-    cityValue: 1,
-    placeValue: 1,
+    cityValue: 'zakopane',
+    placeValue: 'hotel',
     img: hotel,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Zakopane',
@@ -49,8 +46,8 @@ export const PRODUCTS = [
   },
   {
     id: 4,
-    cityValue: 1,
-    placeValue: 1,
+    cityValue: 'zakopane',
+    placeValue: 'hotel',
     img: hotel,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Zakopane',
@@ -59,9 +56,9 @@ export const PRODUCTS = [
   },
   {
     id: 5,
-    cityValue: 0,
-    placeValue: 0,
-    img: house,
+    cityValue: 'wroclaw',
+    placeValue: 'cottage',
+    img: cottage,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Wrocław',
     place: 'Domek',
@@ -69,18 +66,18 @@ export const PRODUCTS = [
   },
   {
     id: 6,
-    cityValue: 0,
-    placeValue: 1,
+    cityValue: 'wroclaw',
+    placeValue: 'hotel',
     img: hotel,
     title: 'Lorem ipsum dolor sit amet',
-    adress: 'Hotel',
-    place: 'Domek',
+    adress: 'Wrocław',
+    place: 'Hotel',
     price: '95',
   },
   {
     id: 7,
-    cityValue: 0,
-    placeValue: 1,
+    cityValue: 'wroclaw',
+    placeValue: 'hotel',
     img: hotel,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Wrocław',
@@ -89,8 +86,8 @@ export const PRODUCTS = [
   },
   {
     id: 8,
-    cityValue: 0,
-    placeValue: 1,
+    cityValue: 'wroclaw',
+    placeValue: 'hotel',
     img: hotel,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Wrocław',
@@ -99,8 +96,8 @@ export const PRODUCTS = [
   },
   {
     id: 9,
-    cityValue: 0,
-    placeValue: 2,
+    cityValue: 'wroclaw',
+    placeValue: 'apartament',
     img: apartament,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Wrocław',
@@ -109,8 +106,8 @@ export const PRODUCTS = [
   },
   {
     id: 10,
-    cityValue: 2,
-    placeValue: 1,
+    cityValue: 'szczecin',
+    placeValue: 'hotel',
     img: hotel,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Szczecin',
@@ -119,8 +116,8 @@ export const PRODUCTS = [
   },
   {
     id: 11,
-    cityValue: 2,
-    placeValue: 1,
+    cityValue: 'szczecin',
+    placeValue: 'hotel',
     img: hotel,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Szczecin',
@@ -129,8 +126,8 @@ export const PRODUCTS = [
   },
   {
     id: 12,
-    cityValue: 2,
-    placeValue: 2,
+    cityValue: 'szczecin',
+    placeValue: 'apartament',
     img: apartament,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Szczecin',
@@ -139,8 +136,8 @@ export const PRODUCTS = [
   },
   {
     id: 13,
-    cityValue: 3,
-    placeValue: 1,
+    cityValue: 'gdansk',
+    placeValue: 'hotel',
     img: hotel,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Gdańsk',
@@ -149,8 +146,8 @@ export const PRODUCTS = [
   },
   {
     id: 14,
-    cityValue: 3,
-    placeValue: 2,
+    cityValue: 'gdansk',
+    placeValue: 'apartament',
     img: apartament,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Gdańsk',
@@ -159,8 +156,8 @@ export const PRODUCTS = [
   },
   {
     id: 15,
-    cityValue: 3,
-    placeValue: 2,
+    cityValue: 'gdansk',
+    placeValue: 'apartament',
     img: apartament,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Gdańsk',
@@ -169,8 +166,8 @@ export const PRODUCTS = [
   },
   {
     id: 16,
-    cityValue: 3,
-    placeValue: 2,
+    cityValue: 'gdansk',
+    placeValue: 'apartament',
     img: apartament,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Gdańsk',
@@ -179,8 +176,8 @@ export const PRODUCTS = [
   },
   {
     id: 17,
-    cityValue: 2,
-    placeValue: 2,
+    cityValue: 'szczecin',
+    placeValue: 'apartament',
     img: apartament,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Gdańsk',
@@ -189,9 +186,9 @@ export const PRODUCTS = [
   },
   {
     id: 18,
-    cityValue: 4,
-    placeValue: 0,
-    img: house,
+    cityValue: 'solina',
+    placeValue: 'cottage',
+    img: cottage,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Solina',
     place: 'Domek',
@@ -199,9 +196,9 @@ export const PRODUCTS = [
   },
   {
     id: 19,
-    cityValue: 4,
-    placeValue: 0,
-    img: house,
+    cityValue: 'solina',
+    placeValue: 'cottage',
+    img: cottage,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Solina',
     place: 'Domek',
@@ -209,8 +206,8 @@ export const PRODUCTS = [
   },
   {
     id: 20,
-    cityValue: 4,
-    placeValue: 1,
+    cityValue: 'solina',
+    placeValue: 'hotel',
     img: apartament,
     title: 'Lorem ipsum dolor sit amet',
     adress: 'Solina',

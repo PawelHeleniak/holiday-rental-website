@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
 
+// options select
+import { CITY, PLACE, MEMBERS } from '../../../schemas/Options'
+
 import { useNavigate } from "react-router-dom";
 
 export const HeaderForm = ({ selectValue }) => {
   const [options, setOptions] = useState({
-    city: 0,
-    place: 0,
+    city: '',
+    place: '',
   })
 
   //navigate
@@ -30,10 +33,10 @@ export const HeaderForm = ({ selectValue }) => {
   return (
     <form method='get'>
       <div className="select">
-        <Select options={selectValue.optionsCity} placeholder='Wybierz miasto' styles={baseStyles} onChange={e => setOptions({ ...options, city: e.value })} />
+        <Select options={CITY} placeholder='Wybierz miasto' styles={baseStyles} onChange={e => setOptions({ ...options, city: e.value })} />
       </div>
       <div className="select">
-        <Select options={selectValue.optionsPlace} placeholder='Wybierz obiekt' styles={baseStyles} onChange={e => setOptions({ ...options, place: e.value })} />
+        <Select options={PLACE} placeholder='Wybierz obiekt' styles={baseStyles} onChange={e => setOptions({ ...options, place: e.value })} />
       </div>
       <div className="button">
         <button onClick={handleClick}>Szukaj oferty</button>

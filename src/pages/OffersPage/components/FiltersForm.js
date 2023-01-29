@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
 
+// options select
+import { CITY, PLACE, MEMBERS } from '../../../schemas/Options'
+
 // export const FiltersForm = ({ optionsCity, optionsPlace, optionsMembers, location }) => {
 export const FiltersForm = ({ props }) => {
-  const { optionsCity, optionsPlace, optionsMembers, location, activeOptions } = props;
+  const { location, activeOptions } = props;
   const { city, place } = location.state.options;
 
-  const [optionss, setOptionss] = useState({
+  const [options, setOptionss] = useState({
     city: city,
     place: place,
   })
@@ -23,13 +26,13 @@ export const FiltersForm = ({ props }) => {
     <>
       <form method="POST">
         <div className="select">
-          <Select options={optionsCity} placeholder='Wybierz miasto' styles={baseStyles} defaultValue={optionsCity[city]} onChange={e => setOptionss({ ...optionss, city: e.value })} />
+          <Select options={CITY} placeholder='Wybierz miasto' styles={baseStyles} defaultValue={CITY[city]} onChange={e => setOptionss({ ...options, city: e.value })} />
         </div>
         <div className="select">
-          <Select options={optionsPlace} placeholder='Wybierz objekt' styles={baseStyles} defaultValue={optionsPlace[place]} onChange={e => setOptionss({ ...optionss, place: e.value })} />
+          <Select options={PLACE} placeholder='Wybierz objekt' styles={baseStyles} defaultValue={PLACE[place]} onChange={e => setOptionss({ ...options, place: e.value })} />
         </div>
         <div className="select">
-          <Select options={optionsMembers} placeholder='Ilość osób' styles={baseStyles} />
+          <Select options={MEMBERS} placeholder='Ilość osób' styles={baseStyles} />
         </div>
         {/* <div className="inputBox">
           <div className="inputWrapper">
@@ -42,7 +45,7 @@ export const FiltersForm = ({ props }) => {
           </div>
         </div> */}
         <div className="button">
-          <button type="button" onClick={e => activeOptions(optionss)}>Szukaj oferty</button>
+          <button type="button" onClick={e => activeOptions(options)}>Szukaj oferty</button>
         </div>
       </form>
     </>

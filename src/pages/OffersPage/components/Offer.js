@@ -15,6 +15,7 @@ export const Offer = (props) => {
         <div className="description">
           <div className="adress">
             <p>{adress}</p>
+            <p>{place}</p>
           </div>
           <div className="price">
             <p>{price}zł za noc</p>

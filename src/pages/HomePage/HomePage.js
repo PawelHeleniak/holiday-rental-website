@@ -2,10 +2,10 @@ import { Header } from './components/Header'
 import { About } from './components/About'
 import { Cities } from './components/Cities'
 
-export const HomePage = (props) => {
+export const HomePage = () => {
   return (
     <>
-      <Header selectValue={props} />
+      <Header />
       <Cities />
       <About />
     </>
