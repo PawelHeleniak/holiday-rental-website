@@ -68,10 +68,6 @@ header {
   height: 50vh;
 
   .headerTitle {
-    // @include ms.tablet {
-    //   border-bottom: 1px solid v.$dark-text-color;
-    // }
-
     font-size: 1.5rem;
     font-weight: 600;
     padding-bottom: 20px;
@@ -118,21 +114,21 @@ header {
                 width: 100%;
                 padding-bottom: 0;
               }
-
             }
           }
-
-          width: 100%;
-
-          .select {
-            padding-bottom: 8px;
-          }
-
-          .button {
-            text-align: center;
-            padding-bottom: 8px;
-          }
         }
+
+        width: 100%;
+
+        .select {
+          padding-bottom: 8px;
+        }
+
+        .button {
+          text-align: center;
+          padding-bottom: 8px;
+        }
+
 
       }
 

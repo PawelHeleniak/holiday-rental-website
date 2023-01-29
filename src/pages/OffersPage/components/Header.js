@@ -8,6 +8,9 @@ export const Header = (props) => {
       <div className="wrapper header">
         <Nav />
         <div className="headerBox">
+          <div className="headerDescription">
+            <h2>Filtruj oferty</h2>
+          </div>
           <div className="searchFrom">
             <FiltersForm props={props} />
           </div>
