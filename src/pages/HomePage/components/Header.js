@@ -10,14 +10,12 @@ export const Header = () => {
         </div>
         <div className="headerBox">
           <div className="headerDescription">
-            <h3>Wyszukaj</h3>
-            <p>Miejsce na kolejny pobyt...</p>
-            <p>Szukaj ofert dopasowanych do swoich potrzeb</p>
+            <h2>Wyszukaj miejsce na kolejny pobyt...</h2>
+            <p>Szukaj ofert dopasowanych do swoich potrzeb.</p>
           </div>
           <div className="searchFrom">
             <HeaderForm />
           </div>
-
         </div>
       </div>
     </header>

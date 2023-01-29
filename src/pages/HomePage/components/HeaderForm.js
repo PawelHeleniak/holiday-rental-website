@@ -6,7 +6,7 @@ import { CITY, PLACE, MEMBERS } from '../../../schemas/Options'
 
 import { useNavigate } from "react-router-dom";
 
-export const HeaderForm = ({ selectValue }) => {
+export const HeaderForm = () => {
   const [options, setOptions] = useState({
     city: '',
     place: '',
@@ -25,7 +25,7 @@ export const HeaderForm = ({ selectValue }) => {
   //react-select style
   const baseStyles = {
     control: (styles) => ({
-      ...styles, borderRadius: '6px', padding: '5px',
+      ...styles, borderRadius: '6px', padding: '3px',
     }),
     option: (styles) => ({ ...styles, color: 'hsl(0, 0%, 10%)', cursor: 'pointer' }),
   }

@@ -4,7 +4,6 @@ import Select from 'react-select'
 // options select
 import { CITY, PLACE, MEMBERS } from '../../../schemas/Options'
 
-// export const FiltersForm = ({ optionsCity, optionsPlace, optionsMembers, location }) => {
 export const FiltersForm = ({ props }) => {
   const { location, activeOptions } = props;
   const { city, place } = location.state.options;
@@ -17,7 +16,7 @@ export const FiltersForm = ({ props }) => {
   //react-select style
   const baseStyles = {
     control: (styles) => ({
-      ...styles, borderRadius: '6px', padding: '5px',
+      ...styles, borderRadius: '6px', padding: '3px',
     }),
     option: (styles) => ({ ...styles, color: 'hsl(0, 0%, 10%)', cursor: 'pointer' }),
   }
