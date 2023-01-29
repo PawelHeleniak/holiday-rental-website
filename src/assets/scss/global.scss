@@ -50,6 +50,7 @@ body {
 button {
   padding: 10px 20px;
   width: 100%;
+  height: 100%;
   font-weight: 600;
   font-size: 1.1rem;
   color: v.$light-text-color;
@@ -60,9 +61,17 @@ button {
 
 //--- HEADER Section---
 header {
+  @include ms.tablet {
+    height: 30vh;
+  }
+
   height: 50vh;
 
   .headerTitle {
+    // @include ms.tablet {
+    //   border-bottom: 1px solid v.$dark-text-color;
+    // }
+
     font-size: 1.5rem;
     font-weight: 600;
     padding-bottom: 20px;
@@ -94,16 +103,37 @@ header {
       }
 
       .searchFrom {
-        width: 100%;
+        @include ms.tablet {
+          display: flex;
 
+          form {
+            @include ms.tablet {
+              display: flex;
+              width: 100%;
+            }
 
-        .select {
-          padding-bottom: 8px;
+            .select,
+            .button {
+              @include ms.tablet {
+                width: 100%;
+                padding-bottom: 0;
+              }
+
+            }
+          }
+
+          width: 100%;
+
+          .select {
+            padding-bottom: 8px;
+          }
+
+          .button {
+            text-align: center;
+            padding-bottom: 8px;
+          }
         }
 
-        .button {
-          text-align: center;
-        }
       }
 
     }
