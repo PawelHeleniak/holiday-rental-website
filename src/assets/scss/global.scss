@@ -129,6 +129,13 @@ header {
           padding-bottom: 8px;
         }
 
+        .clearFilter {
+          button {
+            background-color: v.$light-text-color;
+            color: v.$general-color;
+          }
+        }
+
 
       }
 

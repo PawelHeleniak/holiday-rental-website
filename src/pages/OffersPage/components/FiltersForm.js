@@ -15,8 +15,8 @@ export const FiltersForm = ({ props }) => {
   })
 
   // filter index
-  let cityIndex = CITY.findIndex(e => e.value === city)
-  let placeIndex = PLACE.findIndex(e => e.value === place)
+  let cityIndex = CITY.findIndex(e => e.value === options.city)
+  let placeIndex = PLACE.findIndex(e => e.value === options.place)
 
   //react-select style
   const baseStyles = {
@@ -30,27 +30,17 @@ export const FiltersForm = ({ props }) => {
     <>
       <form method="POST">
         <div className="select">
-          <Select options={CITY} placeholder='Wybierz miasto' styles={baseStyles} defaultValue={CITY[cityIndex]} onChange={e => setOptions({ ...options, city: e.value })} />
+          <Select options={CITY} placeholder='Wybierz miasto' styles={baseStyles} value={CITY[cityIndex]} onChange={e => setOptions({ ...options, city: e.value })} />
         </div>
         <div className="select">
           <Select options={PLACE} placeholder='Wybierz objekt' styles={baseStyles} defaultValue={PLACE[placeIndex]} onChange={e => setOptions({ ...options, place: e.value })} />
         </div>
-        {/* <div className="select">
-          <Select options={MEMBERS} placeholder='Ilość osób' styles={baseStyles} />
-        </div> */}
-        {/* <div className="inputBox">
-          <div className="inputWrapper">
-            <label htmlFor="">Od</label>
-            <input type="date" name="" id="" />
-          </div>
-          <div className="inputWrapper">
-            <label htmlFor="">Do</label>
-            <input type="date" name="" id="" />
-          </div>
-        </div> */}
-        <div className="button">
+        <div className="button filter">
           <button type="button" onClick={e => activeOptions(options)}>Filtruj</button>
         </div>
+        {/* <div className="button clearFilter">
+          <button type="button" onClick={e => setOptions({ ...options, city: '' })} > Wyczyść filtry</button>
+        </div> */}
       </form>
     </>
   )

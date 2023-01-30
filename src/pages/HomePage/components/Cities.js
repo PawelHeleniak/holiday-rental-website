@@ -12,22 +12,27 @@ export const Cities = () => {
   const cities = [
     {
       name: 'Wrocław',
+      city: 'wroclaw',
       img: wroclaw,
     },
     {
       name: 'Zakopane',
+      city: 'zakopane',
       img: zakopane,
     },
     {
       name: 'Szczecin',
+      city: 'szczecin',
       img: szczecin,
     },
     {
       name: 'Gdańsk',
+      city: 'gdansk',
       img: gdansk,
     },
     {
       name: 'Solina',
+      city: 'solina',
       img: solina,
     },
   ]
