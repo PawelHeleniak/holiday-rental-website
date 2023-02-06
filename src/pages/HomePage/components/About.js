@@ -34,7 +34,7 @@ export function About() {
         <div className="title-section">
           <h2>O nas</h2>
         </div>
-        <div className="informationSection">{aboutBox}</div>
+        <div className="information-section">{aboutBox}</div>
       </div>
     </section>
   );

@@ -97,18 +97,32 @@ header {
           display: flex;
 
           form {
-            @include ms.tablet {
-              display: flex;
-              width: 100%;
-            }
-
-            .select-container,
-            .button-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .content{
               @include ms.tablet {
+                display: flex;
                 width: 100%;
-                padding-bottom: 0;
+              }
+              .select-container,
+              .button-container {
+                @include ms.tablet {
+                  width: 100%;
+                  padding-bottom: 0;
+                }
               }
             }
+            .filters{
+              padding-top: 10px;
+              .button-container{
+                padding: 0;
+              }
+              button{
+                width: max-content;
+              }
+            }
+
           }
         }
 
@@ -270,7 +284,7 @@ nav {
 
 //--- OFFERS Section---
 .wrapper.offers {
-  .offersCount {
+  .offers-count {
     padding-bottom: 10px;
 
     p {

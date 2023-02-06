@@ -9,6 +9,9 @@ export function Offers({ options }) {
   const productsList = () => {
     const products = [...PRODUCTS];
     const filtered = products.filter((product) => {
+      if (!city && !place) {
+        return product;
+      }
       if (!city || !place) {
         return product.cityValue === city || product.placeValue === place;
       }

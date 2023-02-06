@@ -35,35 +35,44 @@ export function FiltersForm({ props }) {
       cursor: "pointer",
     }),
   };
-
+  const handleClickFilter = () => {
+    setOptions({ ...options, filteredPlace: "", filteredCity: "" });
+    activeOptions("", "");
+  };
   return (
     <form method="POST">
-      <div className="select-container">
-        <Select
-          options={CITY}
-          placeholder="Wybierz miasto"
-          styles={baseStyles}
-          value={CITY[cityIndex]}
-          onChange={(e) => setOptions({ ...options, filteredCity: e.value })}
-        />
+      <div className="content">
+        <div className="select-container">
+          <Select
+            options={CITY}
+            placeholder="Wybierz miasto"
+            styles={baseStyles}
+            value={options.filteredCity ? CITY[cityIndex] : ""}
+            onChange={(e) => setOptions({ ...options, filteredCity: e.value })}
+          />
+        </div>
+        <div className="select-container">
+          <Select
+            options={PLACE}
+            placeholder="Wybierz objekt"
+            styles={baseStyles}
+            value={options.filteredPlace ? PLACE[placeIndex] : ""}
+            onChange={(e) => setOptions({ ...options, filteredPlace: e.value })}
+          />
+        </div>
+        <div className="button-container filter">
+          <button type="button" onClick={() => activeOptions(options)}>
+            Filtruj
+          </button>
+        </div>
       </div>
-      <div className="select-container">
-        <Select
-          options={PLACE}
-          placeholder="Wybierz objekt"
-          styles={baseStyles}
-          defaultValue={PLACE[placeIndex]}
-          onChange={(e) => setOptions({ ...options, filteredPlace: e.value })}
-        />
+      <div className="filters">
+        <div className="button-container clearFilter">
+          <button type="button" onClick={() => handleClickFilter()}>
+            Wyczyść filtry
+          </button>
+        </div>
       </div>
-      <div className="button-container filter">
-        <button type="button" onClick={() => activeOptions(options)}>
-          Filtruj
-        </button>
-      </div>
-      {/* <div className="button clearFilter">
-          <button type="button" onClick={e => setOptions({ ...options, city: '' })} > Wyczyść filtry</button>
-        </div> */}
     </form>
   );
 }
