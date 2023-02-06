@@ -22,10 +22,10 @@ export function Offers({ options }) {
   return (
     <section>
       <div className="wrapper offers">
-        <div className="offersCount">
+        <div className="offers-count">
           <p>Liczba ofert: {product.length}</p>
         </div>
-        {product}
+        <div className="offers-container">{product}</div>
       </div>
     </section>
   );

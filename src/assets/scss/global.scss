@@ -8,11 +8,15 @@
 }
 
 body {
-  font: 1.1rem v.$font-stack;
+  font: 1rem v.$font-stack;
   color: v.$dark-text-color;
 }
 button{
   cursor: pointer;
+  font-size: 1rem;
+}
+input{
+  font-size: 1rem;
 }
 .wrapper {
   @include ms.desktop {
@@ -122,7 +126,6 @@ header {
             width: 100%;
             height: 100%;
             font-weight: 600;
-            font-size: 1.1rem;
             color: v.$light-text-color;
             background-color: v.$general-color;
             border: none;
@@ -158,7 +161,6 @@ header {
     }
 
     input {
-      font-size: 1.2rem;
       border: none;
       border-radius: 6px;
       padding: 10px;
@@ -224,7 +226,6 @@ header {
           position: absolute;
           padding: 10px;
           font-weight: 600;
-          font-size: 1.2em;
           color: v.$light-text-color;
           text-shadow: 2px 2px 5px v.$dark-text-color;
         }
@@ -276,39 +277,44 @@ nav {
       font-weight: 600;
     }
   }
-
-  .offer {
-    display: flex;
-    flex-direction: row;
-    padding: 10px 0;
-    border-bottom: 1px solid v.$dark-text-color;
-
-    .offerImg {
-      width: 30%;
-
-      img {
-        width: 100%;
-        height: 100%;
+  .offers-container{
+    
+    .offer {
+      display: flex;
+      flex-direction: row;
+      padding: 10px 0;
+      border-bottom: 1px solid v.$dark-text-color;
+      &:first-child{
+        border-top: 1px solid hsl(0deg, 0%, 20%);
       }
-    }
-
-    .offerBox {
-      width: 70%;
-      padding-left: 10px;
-
-      .title {
-        overflow: hidden;
-        white-space: nowrap;
-
-        p {
-          font-weight: 600;
+      
+      .offerImg {
+        width: 30%;
+  
+        img {
+          width: 100%;
+          height: 100%;
         }
       }
-
-      .description {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+  
+      .offerBox {
+        width: 70%;
+        padding-left: 10px;
+  
+        .title {
+          overflow: hidden;
+          white-space: nowrap;
+  
+          p {
+            font-weight: 600;
+          }
+        }
+  
+        .description {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
       }
     }
   }

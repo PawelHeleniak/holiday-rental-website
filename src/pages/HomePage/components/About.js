@@ -31,7 +31,7 @@ export function About() {
   return (
     <section>
       <div className="wrapper about">
-        <div className="titleSection">
+        <div className="title-section">
           <h2>O nas</h2>
         </div>
         <div className="informationSection">{aboutBox}</div>

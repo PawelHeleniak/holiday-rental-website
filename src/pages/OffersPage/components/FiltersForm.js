@@ -14,13 +14,13 @@ export function FiltersForm({ props }) {
   const { activeOptions } = props;
 
   const [options, setOptions] = useState({
-    city,
-    place,
+    filteredCity: city,
+    filteredPlace: place,
   });
 
   // filter index
-  const cityIndex = CITY.findIndex((e) => e.value === options.city);
-  const placeIndex = PLACE.findIndex((e) => e.value === options.place);
+  const cityIndex = CITY.findIndex((e) => e.value === options.filteredCity);
+  const placeIndex = PLACE.findIndex((e) => e.value === options.filteredPlace);
 
   // react-select style
   const baseStyles = {
@@ -44,7 +44,7 @@ export function FiltersForm({ props }) {
           placeholder="Wybierz miasto"
           styles={baseStyles}
           value={CITY[cityIndex]}
-          onChange={(e) => setOptions({ ...options, city: e.value })}
+          onChange={(e) => setOptions({ ...options, filteredCity: e.value })}
         />
       </div>
       <div className="select-container">
@@ -53,7 +53,7 @@ export function FiltersForm({ props }) {
           placeholder="Wybierz objekt"
           styles={baseStyles}
           defaultValue={PLACE[placeIndex]}
-          onChange={(e) => setOptions({ ...options, place: e.value })}
+          onChange={(e) => setOptions({ ...options, filteredPlace: e.value })}
         />
       </div>
       <div className="button-container filter">

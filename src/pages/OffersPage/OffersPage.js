@@ -12,8 +12,8 @@ export function OffersPage() {
     city,
     place,
   });
-  const activeOptions = ({ activeCity, activePlace }) => {
-    setOptions({ ...options, activeCity, activePlace });
+  const activeOptions = ({ filteredCity, filteredPlace }) => {
+    setOptions({ ...options, city: filteredCity, place: filteredPlace });
   };
 
   return (
