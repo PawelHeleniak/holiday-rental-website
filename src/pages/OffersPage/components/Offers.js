@@ -1,33 +1,36 @@
-import React from 'react'
-import { Offer } from './Offer'
-import { PRODUCTS } from '../../../schemas/Products'
+import React from "react";
+import PropTypes from "prop-types";
+import { Offer } from "./Offer";
+import { PRODUCTS } from "../../../schemas/Products";
 
-export const Offers = (props) => {
-  const { city, place } = props.options
+export function Offers({ options }) {
+  const { city, place } = options;
 
   const productsList = () => {
-    let productsList = [...PRODUCTS]
-    let filtered
-    filtered = productsList.filter(product => {
+    const products = [...PRODUCTS];
+    const filtered = products.filter((product) => {
       if (!city || !place) {
-        return product.cityValue === city || product.placeValue === place
-      } else {
-        return product.cityValue === city && product.placeValue === place
+        return product.cityValue === city || product.placeValue === place;
       }
-    })
+      return product.cityValue === city && product.placeValue === place;
+    });
 
-    return filtered
-  }
-  let product = productsList().map(e => <Offer data={e} />)
+    return filtered;
+  };
+  const product = productsList().map((e) => <Offer data={e} />);
 
   return (
     <section>
       <div className="wrapper offers">
-        <div className='offersCount'>
+        <div className="offersCount">
           <p>Liczba ofert: {product.length}</p>
         </div>
         {product}
       </div>
     </section>
-  )
+  );
 }
+
+Offers.propTypes = {
+  options: PropTypes.objectOf.isRequired,
+};

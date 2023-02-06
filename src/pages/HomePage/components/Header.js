@@ -1,23 +1,23 @@
-import React from 'react'
-import { HeaderForm } from './HeaderForm'
+import React from "react";
+import { HeaderForm } from "./HeaderForm";
 
-export const Header = () => {
+export function Header() {
   return (
     <header>
       <div className="wrapper header">
-        <div className="headerTitle">
+        <div className="header-title">
           <p>Wynajem.pl</p>
         </div>
-        <div className="headerBox">
-          <div className="headerDescription">
+        <div className="header-content">
+          <div className="header-description">
             <h2>Wyszukaj miejsce na kolejny pobyt...</h2>
             <p>Szukaj ofert dopasowanych do swoich potrzeb.</p>
           </div>
-          <div className="searchFrom">
+          <div className="search-from">
             <HeaderForm />
           </div>
         </div>
       </div>
     </header>
-  )
+  );
 }

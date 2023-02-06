@@ -1,13 +1,14 @@
-import { Header } from './components/Header'
-import { About } from './components/About'
-import { Cities } from './components/Cities'
+import React from "react";
+import { Header } from "./components/Header";
+import { About } from "./components/About";
+import { Cities } from "./components/Cities";
 
-export const HomePage = () => {
+export function HomePage() {
   return (
     <>
       <Header />
       <Cities />
       <About />
     </>
-  )
+  );
 }

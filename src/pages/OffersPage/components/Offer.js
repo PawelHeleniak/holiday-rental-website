@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
+import PropTypes from "prop-types";
 
-export const Offer = (props) => {
-  const { title, adress, place, price, img } = props.data
-
+export function Offer({ data }) {
+  const { title, adress, place, price, img } = data;
   return (
     <div className="offer">
       <div className="offerImg">
@@ -23,5 +23,9 @@ export const Offer = (props) => {
         </div>
       </div>
     </div>
-  )
+  );
 }
+
+Offer.propTypes = {
+  data: PropTypes.objectOf.isRequired,
+};

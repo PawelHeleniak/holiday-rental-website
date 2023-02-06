@@ -1,20 +1,24 @@
-import React from 'react'
+import React from "react";
+import PropTypes from "prop-types";
 
-export const AboutBox = (props) => {
-  const { title, description, img } = props.val
+export function AboutBox({ about }) {
   return (
     <div className="boxSection">
       <div className="imgWrapper">
         <div className="img">
-          <img src={img} alt={title} />
+          <img src={about.img} alt={about.title} />
         </div>
       </div>
       <div className="boxTitle">
-        <h3>{title}</h3>
+        <h3>{about.title}</h3>
       </div>
       <div className="boxInformation">
-        <p>{description}</p>
+        <p>{about.description}</p>
       </div>
     </div>
-  )
+  );
 }
+
+AboutBox.propTypes = {
+  about: PropTypes.objectOf.isRequired,
+};

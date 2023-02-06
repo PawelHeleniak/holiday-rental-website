@@ -1,28 +1,35 @@
-import React from 'react'
+import React from "react";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
-export const City = (props) => {
-  const { name, img, city } = props.val
+export function City({ data }) {
+  const { name, img, city } = data;
 
-  //navigate
+  // navigate
   const navigate = useNavigate();
   function handleClick() {
-    navigate('/offers', {
+    navigate("/offers", {
       state: {
         options: { city },
-      }
-    })
+      },
+    });
   }
+
   return (
-    <div className="cityBox">
+    <div className="city-container">
       <div className="city">
-        <div className="cityPicture">
-          <div className="cityName"><p>{name}</p></div>
-          <a onClick={handleClick}>
+        <div className="city-picture">
+          <div className="city-name">
+            <p>{name}</p>
+          </div>
+          <button type="button" onClick={handleClick}>
             <img src={img} alt={name} />
-          </a>
+          </button>
         </div>
       </div>
     </div>
-  )
+  );
 }
+City.propTypes = {
+  data: PropTypes.objectOf.isRequired,
+};

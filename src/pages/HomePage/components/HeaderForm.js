@@ -1,46 +1,63 @@
-import React, { useState } from 'react'
-import Select from 'react-select'
+import React, { useState } from "react";
+import Select from "react-select";
 
 // options select
-import { CITY, PLACE, MEMBERS } from '../../../schemas/Options'
-
 import { useNavigate } from "react-router-dom";
+import { CITY, PLACE } from "../../../schemas/Options";
 
-export const HeaderForm = () => {
+export function HeaderForm() {
   const [options, setOptions] = useState({
-    city: '',
-    place: '',
-  })
+    city: "",
+    place: "",
+  });
 
-  //navigate
+  // navigate
   const navigate = useNavigate();
   function handleClick() {
-    navigate('/offers', {
+    navigate("/offers", {
       state: {
-        options: options,
-      }
-    })
+        options,
+      },
+    });
   }
 
-  //react-select style
+  // react-select style
   const baseStyles = {
     control: (styles) => ({
-      ...styles, borderRadius: '6px', padding: '3px',
+      ...styles,
+      borderRadius: "6px",
+      padding: "3px",
     }),
-    option: (styles) => ({ ...styles, color: 'hsl(0, 0%, 10%)', cursor: 'pointer' }),
-  }
+    option: (styles) => ({
+      ...styles,
+      color: "hsl(0, 0%, 10%)",
+      cursor: "pointer",
+    }),
+  };
 
   return (
-    <form method='get'>
-      <div className="select">
-        <Select options={CITY} placeholder='Wybierz miasto' styles={baseStyles} onChange={e => setOptions({ ...options, city: e.value })} />
+    <form method="get">
+      <div className="select-container">
+        <Select
+          options={CITY}
+          placeholder="Wybierz miasto"
+          styles={baseStyles}
+          onChange={(e) => setOptions({ ...options, city: e.value })}
+        />
       </div>
-      <div className="select">
-        <Select options={PLACE} placeholder='Wybierz obiekt' styles={baseStyles} onChange={e => setOptions({ ...options, place: e.value })} />
+      <div className="select-container">
+        <Select
+          options={PLACE}
+          placeholder="Wybierz obiekt"
+          styles={baseStyles}
+          onChange={(e) => setOptions({ ...options, place: e.value })}
+        />
       </div>
-      <div className="button">
-        <button onClick={handleClick}>Szukaj oferty</button>
+      <div className="button-container">
+        <button type="button" onClick={handleClick}>
+          Szukaj oferty
+        </button>
       </div>
     </form>
-  )
+  );
 }

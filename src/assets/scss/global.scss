@@ -11,7 +11,9 @@ body {
   font: 1.1rem v.$font-stack;
   color: v.$dark-text-color;
 }
-
+button{
+  cursor: pointer;
+}
 .wrapper {
   @include ms.desktop {
     max-width: calc(1200px);
@@ -21,7 +23,7 @@ body {
   padding: 20px;
 
 
-  .titleSection {
+  .title-section {
     text-align: center;
     margin-bottom: 20px;
     position: relative;
@@ -47,18 +49,6 @@ body {
   }
 }
 
-button {
-  padding: 10px 20px;
-  width: 100%;
-  height: 100%;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: v.$light-text-color;
-  background-color: v.$general-color;
-  border: none;
-  border-radius: 6px;
-}
-
 //--- HEADER Section---
 header {
   @include ms.tablet {
@@ -67,7 +57,7 @@ header {
 
   height: 50vh;
 
-  .headerTitle {
+  .header-title {
     font-size: 1.5rem;
     font-weight: 600;
     padding-bottom: 20px;
@@ -78,7 +68,7 @@ header {
     flex-direction: column;
     height: 100%;
 
-    .headerBox {
+    .header-content {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -89,7 +79,7 @@ header {
       box-shadow: 0px 0px 10px -2px rgba(66, 68, 90, 1);
       border-radius: 10px;
 
-      .headerDescription {
+      .header-description {
         padding-bottom: 20px;
 
         h2 {
@@ -98,7 +88,7 @@ header {
         }
       }
 
-      .searchFrom {
+      .search-from {
         @include ms.tablet {
           display: flex;
 
@@ -108,8 +98,8 @@ header {
               width: 100%;
             }
 
-            .select,
-            .button {
+            .select-container,
+            .button-container {
               @include ms.tablet {
                 width: 100%;
                 padding-bottom: 0;
@@ -120,13 +110,24 @@ header {
 
         width: 100%;
 
-        .select {
+        .select-container {
           padding-bottom: 8px;
         }
 
-        .button {
+        .button-container {
           text-align: center;
           padding-bottom: 8px;
+          button {
+            padding: 10px 20px;
+            width: 100%;
+            height: 100%;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: v.$light-text-color;
+            background-color: v.$general-color;
+            border: none;
+            border-radius: 6px;
+          }
         }
 
         .clearFilter {
@@ -201,7 +202,7 @@ header {
 
 //--- CITY Section---
 .wrapper.cities {
-  .informationSection {
+  .information-section {
     @include ms.tablet {
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 20px;
@@ -215,10 +216,11 @@ header {
       padding-bottom: 20px;
 
 
-      .cityPicture {
+      .city-picture {
         position: relative;
+        overflow: hidden;
 
-        .cityName {
+        .city-name {
           position: absolute;
           padding: 10px;
           font-weight: 600;
@@ -226,10 +228,19 @@ header {
           color: v.$light-text-color;
           text-shadow: 2px 2px 5px v.$dark-text-color;
         }
-
-        img {
-          width: 100%;
-          aspect-ratio: 2;
+        button{
+          border: none;
+          padding: 0;
+          background-color: transparent;
+          transition: transform .2s ease;
+          img {
+            width: 100%;
+            max-height: 600px;
+            aspect-ratio: 2;
+          }
+          &:hover{
+            transform: scale(1.1);
+          }
         }
       }
     }
@@ -246,6 +257,13 @@ nav {
     svg {
       color: v.$dark-text-color;
     }
+  }
+}
+
+.settings {
+  button {
+    background-color: v.$light-text-color;
+    color: black;
   }
 }
 

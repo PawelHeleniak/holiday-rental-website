@@ -1,28 +1,26 @@
-import React, { useState } from 'react'
-import { Offers } from './components/Offers'
-import { Header } from './components/Header'
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Offers } from "./components/Offers";
+import { Header } from "./components/Header";
+// import { Settings } from "./components/Settings";
 
-import { useLocation } from "react-router-dom"
-
-export const OffersPage = () => {
+export function OffersPage() {
   // get state from HeaderForm
   const location = useLocation();
-  const { city, place } = location.state.options
-
-  const [options, setOptions] = useState(
-    {
-      city: city,
-      place: place,
-    }
-  )
-  const activeOptions = ({ city, place }) => {
-    setOptions({ ...options, city, place })
-  }
+  const { city, place } = location.state.options;
+  const [options, setOptions] = useState({
+    city,
+    place,
+  });
+  const activeOptions = ({ activeCity, activePlace }) => {
+    setOptions({ ...options, activeCity, activePlace });
+  };
 
   return (
     <>
-      <Header location={location} activeOptions={activeOptions} />
+      <Header activeOptions={activeOptions} />
+      {/* <Settings /> */}
       <Offers options={options} />
     </>
-  )
+  );
 }
