@@ -37,26 +37,28 @@ export function HeaderForm() {
 
   return (
     <form method="get">
-      <div className="select-container">
-        <Select
-          options={CITY}
-          placeholder="Wybierz miasto"
-          styles={baseStyles}
-          onChange={(e) => setOptions({ ...options, city: e.value })}
-        />
-      </div>
-      <div className="select-container">
-        <Select
-          options={PLACE}
-          placeholder="Wybierz obiekt"
-          styles={baseStyles}
-          onChange={(e) => setOptions({ ...options, place: e.value })}
-        />
-      </div>
-      <div className="button-container">
-        <button type="button" onClick={handleClick}>
-          Szukaj oferty
-        </button>
+      <div className="content">
+        <div className="select-container">
+          <Select
+            options={CITY}
+            placeholder="Wybierz miasto"
+            styles={baseStyles}
+            onChange={(e) => setOptions({ ...options, city: e.value })}
+          />
+        </div>
+        <div className="select-container">
+          <Select
+            options={PLACE}
+            placeholder="Wybierz obiekt"
+            styles={baseStyles}
+            onChange={(e) => setOptions({ ...options, place: e.value })}
+          />
+        </div>
+        <div className="button-container">
+          <button type="button" onClick={handleClick}>
+            Szukaj oferty
+          </button>
+        </div>
       </div>
     </form>
   );

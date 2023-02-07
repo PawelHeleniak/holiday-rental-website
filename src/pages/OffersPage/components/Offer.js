@@ -5,10 +5,10 @@ export function Offer({ data }) {
   const { title, adress, place, price, img } = data;
   return (
     <div className="offer">
-      <div className="offerImg">
+      <div className="offer-image">
         <img src={img} alt="" />
       </div>
-      <div className="offerBox">
+      <div className="offer-box">
         <div className="title">
           <p>{title}</p>
         </div>

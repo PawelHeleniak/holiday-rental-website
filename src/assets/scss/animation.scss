@@ -1,0 +1,11 @@
+@keyframes slide{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@mixin slide($dutarion, $delay) {
+  animation: slide $dutarion $delay ease-in both;
+}
