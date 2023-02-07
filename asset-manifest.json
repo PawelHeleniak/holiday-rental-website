@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/holiday-rental-website/static/css/main.f9c0e8e7.css",
-    "main.js": "/holiday-rental-website/static/js/main.334a8c09.js",
+    "main.css": "/holiday-rental-website/static/css/main.bb78c53a.css",
+    "main.js": "/holiday-rental-website/static/js/main.2f78421d.js",
     "static/js/787.36066407.chunk.js": "/holiday-rental-website/static/js/787.36066407.chunk.js",
     "static/media/wroclaw.jpg": "/holiday-rental-website/static/media/wroclaw.6b7d0a364fa7a1bdd2c4.jpg",
     "static/media/zakopane.jpg": "/holiday-rental-website/static/media/zakopane.06df9609311cfe8d7b9b.jpg",
@@ -12,12 +12,12 @@
     "static/media/cottage.jpg": "/holiday-rental-website/static/media/cottage.5edddfd976ffdcf04969.jpg",
     "static/media/hotel.jpg": "/holiday-rental-website/static/media/hotel.97b0faae3d48e2b44805.jpg",
     "index.html": "/holiday-rental-website/index.html",
-    "main.f9c0e8e7.css.map": "/holiday-rental-website/static/css/main.f9c0e8e7.css.map",
-    "main.334a8c09.js.map": "/holiday-rental-website/static/js/main.334a8c09.js.map",
+    "main.bb78c53a.css.map": "/holiday-rental-website/static/css/main.bb78c53a.css.map",
+    "main.2f78421d.js.map": "/holiday-rental-website/static/js/main.2f78421d.js.map",
     "787.36066407.chunk.js.map": "/holiday-rental-website/static/js/787.36066407.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9c0e8e7.css",
-    "static/js/main.334a8c09.js"
+    "static/css/main.bb78c53a.css",
+    "static/js/main.2f78421d.js"
   ]
 }
